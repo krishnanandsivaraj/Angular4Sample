@@ -1,0 +1,55 @@
+﻿/*angular-accordion/css*/
+
+.collapsible-item {
+    margin-bottom:3px;
+}
+
+.collapsible-item .title {
+  padding: 5px 10px;
+  background-color: #3C3D3F;
+  border: 1px solid #000;
+  cursor: pointer;
+  color:#fff;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.collapsible-item .title .icon {
+  float: right;
+  height: 20px;
+  width: 20px;
+  font-size: 19px !important;
+  padding-right: 1px;
+}
+
+.collapsible-item .title .iconleft {
+  float: left !important;
+}
+
+.collapsible-item .body {
+  position: relative;
+  top: 0px;
+  max-height: 0;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-top: 0;
+  z-index: -1;
+  -webkit-transition: max-height 0.5s ease;
+     -moz-transition: max-height 0.5s ease;
+       -o-transition: max-height 0.5s ease;
+          transition: max-height 0.5s ease;
+}
+
+.collapsible-item .body .content {
+  padding: 0 0 0 0;
+  overflow:hidden;
+}
+
+.collapsible-item.open .body {
+  max-height: 600px;
+  z-index: 1;
+  overflow:hidden;
+}
+
+.collapsible-item.open .title {
+}

@@ -1,0 +1,54 @@
+<div id="login">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="login-form">
+                <img alt="" src="./img/logos/tapestrykpi_logo.png">
+
+                <h2 class="login-text" data-progress-notification="inProgress">Login</h2>
+                <!--<div style="color: #B40404">{{message}}</div>-->
+
+                <form action="" >
+                    <fieldset>
+                        <div class="clearfix">
+                            <input #username (keyup)="onUserNameKeyPress(username.value)" auto-fill-sync class="input" type="text" placeholder="Email" name="username" autofocus="autofocus">
+                        </div>
+
+                        <div class="clearfix">
+                            <input #password (keyup)="onPasswordKeyPress(password.value)" class="input" type="password" placeholder="Password">
+                        </div>
+                        
+                            <button type="button" class="btn btn-primary" (click)="staticModal.show();login()">Sign in</button>
+                        <!--<button type="button" class="btn btn-primary" (click)="staticModal.show()">Static modal</button>-->
+                        <a class="forgetpw">Forgot your password?</a>
+                        <input type="checkbox" class="rememberme" id="rememberme"><label for="rememberme">Remember Me</label>
+                    </fieldset>
+                </form>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-header modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <button class="close" type="button" (click)="staticModal.hide()">X</button>
+        <h4 class="modal-title">Your login is associated with multiple clients :</h4>
+
+    <div data-progress-notification="inProgress"></div>
+    <div class="modalbody">
+        <form name="agentsform" class="agentsform">
+            <div class="form-group">
+                <select data-ng-model="clientname" data-ng-options="client.displayName for client in Clients track by client.name"
+                    name="clientname" data-chosen="client.name" required>
+                    <option *ngFor="let client of clients" value= {{client.displayName}}>{{client.displayName}}</option>
+                    
+                </select>
+
+                <div class="clearfix"></div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn delete-btn" type="button" (click)="staticModal.hide()">Cancel</button>
+        <button class="btn btn-primary" type="button" (click)="Navigate()">submit</button>
+    </div>
+</div>

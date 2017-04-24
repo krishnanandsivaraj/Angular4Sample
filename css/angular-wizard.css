@@ -1,0 +1,221 @@
+.steps-indicator {
+  /*position: fixed;
+  top: 0;*/
+  float:left;
+  width:100%;
+  border-bottom: 1px solid #3C3D3F;
+  
+}
+.steps-indicator * {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.steps-indicator li {
+  position: relative;
+  float: left;
+  /*padding: 10px 3px 0;*/
+  margin: 0;
+  line-height: 15px;
+  text-align: center;
+}
+.gridheading {
+    color: #3c3d3f;
+    display:block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c6c7c7;
+    float:left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.steps-indicator li a {
+  font-weight: bold;
+  color: #808080;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.steps-indicator li a {
+  position: absolute;
+  top: -7px;
+  width: 14px;
+  height: 14px;
+  background-color:#f8f8f8;
+  content: '';
+  transition: 0.25s;
+  color:#fff;
+  /*border: 1px solid #ccc;*/
+}
+.steps-indicator li a:hover {
+  color: #4d4d4d;
+}
+
+.steps-indicator li.default {
+  pointer-events: none;
+  display:none;
+}
+
+.steps-indicator li.default a:hover {
+  color: #808080;
+}
+
+.steps-indicator li.current,
+.steps-indicator li.editing {
+  pointer-events: none;
+    border-top: 1px solid #3C3D3F;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: -1px;
+}
+
+.steps-indicator li.current a {
+    background-color: #e7bf00;
+    color: #fff;
+    box-shadow: 5px 5px 8px #888;
+}
+
+.steps-indicator li.done a {
+    background-color: #a1a218;
+    color: #fff;
+}
+
+.steps-indicator li.editing a {
+  background-color: #e7bf00;
+  /*box-shadow: 5px 5px 8px #888;*/
+}
+.steps-indicator li a .steplabel {
+    color: #fff;
+    display: inline-block;
+    float: left;
+    font: bold 20px/31px;
+    padding: 0 5px 5px;
+    position: relative;
+    text-align: center;
+    width: 15px;
+}
+li.default a {
+    color:#ccc;
+}
+li.default a .steplabel {
+    color:#ccc;
+}
+.steps-indicator li a {
+    display: inline-block;
+    height: 40px;
+    margin: 0;
+    outline-style: none;
+    padding: 3px;
+    position: static;
+    text-decoration: none;
+    width: 130px;
+    z-index: 99;
+    line-height: 30px;
+    border-right:1px solid #3C3D3F;
+}
+.steps-indicator li:last-child a {
+    border-right: 0 none;
+}
+.steps-indicator li.editing:last-child a {
+    border-right:1px solid #3C3D3F;
+}
+.steps-indicator li.editing:first-child a {
+    border-left:1px solid #3C3D3F;
+}
+li.done a:hover{
+    color: #5A5655;
+    /*border:1px solid #5A5655;*/
+    opacity:1;
+}
+li.done a:hover .steplabel {
+    color: #5A5655;
+}
+.stepDesc {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 22px;
+    padding: 5px;
+    position: relative;
+    text-align: center;
+    width: 104px;
+}
+.source-header {
+    border-bottom: 1px solid #d4d4d4;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}
+.widgetframework .close-popup {
+    margin-top: 0px;
+}
+.source-template-header-heading {
+    font-size: 16px;
+    margin: 10px auto 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.widgetframework .source-popup-modal {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: none !important;
+    width: 90%;
+    padding: 15px 0;
+}
+.modal.widgetframework {
+    /*left: 25% !important;
+    margin: 20px auto;
+    min-width: 650px;
+    width: 50% !important;*/
+}
+.widgetframework label {
+    float: left;
+    width: 40%;
+}
+.add-account-form-field label {
+    cursor: auto;
+}
+.label-bold {
+    font-weight: bold;
+}
+.chosen-choices, .chosen-container {
+    width: 45% !important;
+}
+.add-form-btn {
+    margin: 25px auto;
+    text-align: center;
+}
+.change-btn {
+    background-color: #e5be20;
+}
+.common-btn {
+    border-radius: 0;
+    color: white;
+    margin-left: 11px;
+    padding: 7px 12px;
+    width: 130px;
+    border:0;font-size:14px;
+}
+.delete-btn {
+    background-color: #58595b;
+}
+.add-account-form-field {
+    /*float: left;
+    margin-bottom: 10px;
+    overflow: visible;
+    width: 100%;*/
+}
+.steps-indicator li:first-child {
+    padding-left:0;
+}
+.add-account-form-field label:last-child {
+    width:45%;
+}

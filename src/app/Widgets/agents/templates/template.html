@@ -1,0 +1,26 @@
+<!--<div class="modal-content">-->
+    <div class="modal-header">
+        <button class="close" type="button" data-ng-click="closeModal()">X</button>
+        <h4 class="modal-title">Your login is associated with multiple clients :</h4>
+    </div>
+    <div data-progress-notification="inProgress"></div>
+    <div class="modalbody">
+        <form name="agentsform" class="agentsform">
+            <div class="form-group">
+                <select data-ng-model="clientname" data-ng-options="client.displayName for client in Clients track by client.name"
+                    name="clientname" data-chosen="client.name" required>
+                    <option value="">Please Select a Client</option>
+                </select>
+
+                <div class="clearfix"></div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn delete-btn" type="button" data-ng-click="closeModal()">Cancel</button>
+        <button class="btn btn-primary" type="button" data-ng-click="submit(agentsform.$valid,clientname)">submit</button>
+    </div>
+<!--</div>-->
+
+
+

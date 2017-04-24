@@ -1,0 +1,343 @@
+.modal-lg {
+        width: 500px !important;
+        margin-top: 100px;
+}
+#login {
+    height:820px;
+}
+#login{
+    background-color: white;
+}
+.login-form {
+    margin: 40px auto;
+    width: 336px;
+}
+.login-form h2 {
+    font-weight: normal;
+    margin: 30px 0 20px;
+    font-size: 31.5px;
+    line-height: 2.4;
+}
+.login-form h2 img {
+    margin-right: 10px;
+}
+.login-form input {
+    width: 21em;
+    height: 30px;
+    box-sizing: content-box;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 0;
+    color: #555555;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 4px 6px;
+    vertical-align: middle;
+}
+.rememberme {
+    width: 13px !important;
+    margin-top: 15px !important;
+    height: auto !important;
+    margin-right: 6px !important;
+    margin-left: 5em !important;
+
+}
+.login-form button {
+    width: 100%;
+}
+.agents .modal-lg {    width: 500px !important;
+    margin-top: 100px;}
+#loginBox{
+  width:100%;
+  height: auto;
+  padding-top:7%;
+  padding-bottom:20%;
+}
+fieldset {
+margin: 10px 0 20px;
+}
+.login-text{
+  text-align: left;
+}
+.ico-btn-more {
+/*background: url(../img/global-sprite.png) -80px -183px no-repeat;*/
+width: 12px;
+height: 12px;
+display: inline-block;
+text-indent: -9999em;
+margin: 0 0 0 20px;
+}
+.forgetpw {
+    display:inline-block;
+    color:#a1a218;
+    margin-top:10px;
+    font-size:13px;
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {    
+    font-weight: 300;
+}
+.tab-content {
+    background: none repeat scroll 0 0 #fff;
+    margin-bottom: 20px;
+    padding: 20px 15px;
+}
+.input-icon {
+    position: relative;
+}
+.input-icon.right i {
+    float: right;
+    right: 60px;
+}
+.input-icon i {
+    color: #999999;
+    display: block;
+    font-size: 16px;
+    height: 16px;
+    margin: 4px 2px 4px 10px;
+    position: absolute;
+    text-align: center;
+    width: 16px;
+}
+.input-icon.right input {
+    padding-left: 12px !important;
+    padding-right: 33px !important;
+}
+.agents .modal-lg {    width: 500px !important;
+    margin-top: 100px;}
+.input-icon input {
+    color: #999999;
+    padding-left: 33px !important;
+}
+.form-control {
+    border-color: #e5e5e5;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+.btn-blue {
+    background-color: #0a819c;
+    border-color: #097992;
+    color: #ffffff;
+}
+.btn {
+    border-radius: 0 !important;
+    outline: medium none !important;
+}
+.btn-default {
+    background-color: #efefef;
+    border-color: #e5e5e5;
+    color: #777777;
+}
+.btn {
+    border-radius: 0 !important;
+    outline: medium none !important;
+}
+.btn-success {
+    background-color: #5cb85c;
+    border-color: #55b555;
+    color: #ffffff;
+}
+.btn-blue:active, .btn-blue.active, .open .dropdown-toggle.btn-blue {
+    background-image: none;
+}
+.btn-blue:hover, .btn-blue:focus, .btn-blue:active, .btn-blue.active, .open .dropdown-toggle.btn-blue {
+    background-color: #086176;
+    border-color: #064a59;
+    color: #ffffff;
+}
+a:focus, .btn:focus {
+    outline: 0 none !important;
+}
+h4 {
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+.modal-body .tab-content {
+    margin-bottom:0;
+}
+
+.modal-body .tab-content {
+    padding: 0;
+}
+.modal-body {
+    padding-bottom: 0;
+}
+
+.agents .modalbody {
+    padding: 15px 15px 0;
+    padding-top:24px;
+}
+.modal-body .input-icon.right {
+    width: 300px;
+}
+.agents .modal-footer {
+    border-top: 0 none;
+    padding: 15px 15px 25px;
+    text-align: left;
+}
+.error {
+    display:block;
+    color:red;
+    margin-top:5px;
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.delete-btn {
+    color:#fff;
+    background-color: #58595b;
+}
+.agentsform select {
+    width:300px;
+    color: #999999;
+}
+.agents .btn.delete-btn, .agents .btn.btn-primary {
+    min-width:80px;
+}
+
+.agents .chosen-container {
+    width: 200px !important;
+}
+.close {font-size: 15px !important;margin-top: 4px !important;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {    
+    font-weight: 300;
+}
+.tab-content {
+    background: none repeat scroll 0 0 #fff;
+    margin-bottom: 20px;
+    padding: 20px 15px;
+}
+.input-icon {
+    position: relative;
+}
+.input-icon.right i {
+    float: right;
+    right: 60px;
+}
+.input-icon i {
+    color: #999999;
+    display: block;
+    font-size: 16px;
+    height: 16px;
+    margin: 4px 2px 4px 10px;
+    position: absolute;
+    text-align: center;
+    width: 16px;
+}
+.input-icon.right input {
+    padding-left: 12px !important;
+    padding-right: 33px !important;
+}
+.agents .modal-lg {width: 500px !important;margin-top: 100px;}
+.input-icon input {
+    color: #999999;
+    padding-left: 33px !important;
+}
+.form-control {
+    border-color: #e5e5e5;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+.btn-blue {
+    background-color: #0a819c;
+    border-color: #097992;
+    color: #ffffff;
+}
+.btn {
+    border-radius: 0 !important;
+    outline: medium none !important;
+}
+.btn-default {
+    background-color: #efefef;
+    border-color: #e5e5e5;
+    color: #777777;
+}
+.btn {
+    border-radius: 0 !important;
+    outline: medium none !important;
+}
+.btn-success {
+    background-color: #5cb85c;
+    border-color: #55b555;
+    color: #ffffff;
+}
+.btn-blue:active, .btn-blue.active, .open .dropdown-toggle.btn-blue {
+    background-image: none;
+}
+.btn-blue:hover, .btn-blue:focus, .btn-blue:active, .btn-blue.active, .open .dropdown-toggle.btn-blue {
+    background-color: #086176;
+    border-color: #064a59;
+    color: #ffffff;
+}
+a:focus, .btn:focus {
+    outline: 0 none !important;
+}
+h4 {
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+.modal-body .tab-content {
+    margin-bottom:0;
+}
+
+.modal-body .tab-content {
+    padding: 0;
+}
+.modal-body {
+    padding-bottom: 0;
+}
+
+.agents .modalbody {
+    padding: 15px 15px 0;
+    padding-top:24px;
+}
+.modal-body .input-icon.right {
+    width: 300px;
+}
+.agents .modal-footer {
+    border-top: 0 none;
+    padding: 15px 15px 25px;
+    text-align: left;
+}
+.error {
+    display:block;
+    color:red;
+    margin-top:5px;
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.delete-btn {
+    color:#fff;
+    background-color: #58595b;
+}
+.agentsform select {
+    width:300px;
+    color: #999999;
+}
+.agents .btn.delete-btn, .agents .btn.btn-primary {
+    min-width:80px;
+}
+
+.agents .chosen-container {
+    width: 200px !important;
+}
+.close {font-size: 15px !important;margin-top: 4px !important;
+}

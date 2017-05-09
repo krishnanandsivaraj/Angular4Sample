@@ -1,0 +1,79 @@
+<div class="sourcemgmt-content-wrapper admin-widget-container">
+    <div class="content-header">
+        <div class="key-icon"></div>
+        <h2 class="content-header-heading">Source Management</h2>
+        <div class="filter-request-container  pull-right">
+            <input class="filter-input" type="text" name="filter" data-ng-model="datasource.name">
+            <button class="custom-request-btn" type="button" data-ng-click="requestCustomSource()">Request Custom Source</button>
+        </div>
+    </div>
+    <ul class="row-fluid navigation-btn-container">
+        <li *ngFor="let item of viewingOptions" (click)="allsources()" class="btn navigation-btn retreiver-management-navbtn {{item.isNavSelected}}">{{item.name}}<div class="selected-navigation-btn"></div>
+        </li>
+    </ul>
+
+    <div class="quick-view-container" data-progress-notification="inProgress">
+        <div class="quick-view-border">
+            <p class="quick-view-retreiver-heading pull-left">{{titleName}}</p>
+            <div class="quick-view">
+                <span>Quick View</span>
+                <select data-ng-model="datasource.platform">
+                    <option value="" selected="selected">All</option>
+                    <option value="Analytics">Analytics</option>
+                    <option value="Mobile">Mobile</option>
+                    <option value="Social">Social</option>
+                    <option value="Syndication">Syndication</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="source-options-container" >
+        <!--<p>class="nodata">There are no Source Accounts.</p>-->
+        <div class="source-options-box {{v.enabled}} verified" *ngFor="let v of resultt">
+            <p class="source-options-box-heading">{{v.displayName}}</p>
+            <div class="source-options-box-body">
+                <p class="source-options-box-img  {{v.name}}"></p>
+
+                <p class="source-connection-status-summary ">{{v.description}}</p>
+
+                <!--<div class="source-box-hover-view">
+                    <span class="last-access-date">Last Access {{enableConnectors.lastAccess}}</span><a href="" class="source-connection-edit">Edit</a>
+                    <ul class="source-connector-status">
+                        <li class="source-connection-name " data-ng-repeat="acc in enableConnectors.account">{{acc.displayName}}
+                        <span class="source-connection-status-hover ng-class:acc.status"></span>
+                        </li>
+                    </ul>
+                    <p class="extra-connector">{{enableConnectors.summary}}</p>
+                    <p class="hover-connector-summary ng-class:connector.satutsSummaryIcon">{{enableConnectors.satutsSummaryText}} </p>
+                </div>-->
+            </div>
+        </div>
+    </div>
+        <div class="quick-view-container" data-progress-notification="inProgress">
+        <div class="quick-view-border">
+            <p class="quick-view-retreiver-heading pull-left">{{titleAllName}}</p>
+        </div>
+    </div>
+    <div class="source-options-container" >
+        <!--<p>class="nodata">There are no Source Accounts.</p>-->
+        <div class="source-options-box {{v.enabled}} verified" *ngFor="let v of resultAll">
+            <p class="source-options-box-heading">{{v.displayName}}</p>
+            <div class="source-options-box-body">
+                <p class="source-options-box-img  {{v.name}}"></p>
+
+                <p class="source-connection-status-summary ">{{v.description}}</p>
+
+                <!--<div class="source-box-hover-view">
+                    <span class="last-access-date">Last Access {{enableConnectors.lastAccess}}</span><a href="" class="source-connection-edit">Edit</a>
+                    <ul class="source-connector-status">
+                        <li class="source-connection-name " data-ng-repeat="acc in enableConnectors.account">{{acc.displayName}}
+                        <span class="source-connection-status-hover ng-class:acc.status"></span>
+                        </li>
+                    </ul>
+                    <p class="extra-connector">{{enableConnectors.summary}}</p>
+                    <p class="hover-connector-summary ng-class:connector.satutsSummaryIcon">{{enableConnectors.satutsSummaryText}} </p>
+                </div>-->
+            </div>
+        </div>
+    </div>

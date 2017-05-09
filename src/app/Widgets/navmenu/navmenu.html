@@ -1,36 +1,34 @@
-<div class="header-widget navbar navbar-default navbar-static-top ng-scope" role="navigation"><div class="navbar-inner">
-            <div class="navbar navbar-inverse"><div class="container-fluid header-container">
-                <middle-section></middle-section>
+<div class="header-widget navbar navbar-default navbar-static-top" role="navigation">
+    <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <div class="container-fluid header-container">
+                <ul class="pull-right account">
+                    <li class="user-msg">Welcome {{firstname}} {{lastname}}</li>
+                    <li class='user-name'>{{clientName}}</li>
+                    <li class="channel-admin dropdown" data-ng-hide="admin" data-ng-disabled="true" disabled="disabled"><a data-toggle="dropdown">Admin</a>
+                        <ul class="global dropdown-menu">
+                            <li><a data-ui-sref="admin.landing" target="_self"><span class="report-category link">Client Admin </span>Manage Source, Retriever & Transformation Templates Management </a></li>
+                            <li data-ng-show="swtchClientEnable"><a data-ng-click="showClients()" target="_self" class="editTemplateBtn"><span class="report-category">Switch Client</span>Switch client which is used to switch over from one client to another</a></li> 
+                        </ul>
+                    </li>
+                    <li class="logout-msg"><a class="log-out btn-logout" (click)="logout()">Log Out</a></li>
+                    <li><a><span class="glyphicon glyphicon-cog"></span></a></li>
+                </ul>
                 <ul class="nav">
-                    <li class="branding">
-                    <a data-ui-sref="admin.landing" target="_self" href="#/landing">TapestryKPI</a>
-                    </li>
-                    <li CLASS="channel-online dropdown">
-                        <a data-toggle="dropdown" class="ctn disabled"></a>
-                    </li>
-                    <li class="channel-mobile dropdown">
-                    <a data-toggle="dropdown" class="ctn disabled">Online</a>
-                    </li>
-					<li class="channel-social dropdown">
-                       <a data-toggle="dropdown" class="ctn disabled"></a> 
-                    </li>
-					<li CLASS="channel-syndication dropdown">
-                        <a data-toggle="dropdown" class="ctn disabled"></a>
+                    <li class="branding"><a href="#" target="_self" href="#/{{homePageurl}}">TapestryKPI</a></li>
+                    <li class="channel-online dropdown">
+                        <a href="./#/reports"></a>
                     </li>
                 </ul>
-                 <ul class="pull-right account">
-                    <li class="user-msg ng-binding">Welcome Francis Lavelle</li>
-                    <li class="user-name ng-binding">TapestryKPI</li>
-                    <li class="channel-admin dropdown"><a data-toggle="dropdown">Admin</a>
-                       
-                    </li>
-                    
-                    <li class="fa-content"><em class="fa fa-navicon"></em></li>
-                    
-                    
-                    <li class="logout-msg"><a class="log-out btn-logout">Log Out</a></li>
-                    <li><a><span class="glyphicon glyphicon-cog"></span></a></li>
-                </ul>  
-                
             </div>
-        </div></div></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+

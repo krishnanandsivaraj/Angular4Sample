@@ -1,0 +1,104 @@
+/* Quick Actions toolbar styles. */
+
+#quickactions {
+    background-color:white;
+    padding:10px 20px 0;
+    margin:20px 45px 30px;
+    box-shadow:0 0 5px 5px #dfded7;    
+    font-size:14px;
+}
+.borderclass .quick-actions-container {
+    border: 2px dashed #ccc;
+}
+#quickactions .quick-actions-heading {
+    display: inline-block;
+    margin:0 0 10px 15px;
+    text-transform:uppercase;
+    color:#323335;
+	font-weight:bold;
+    
+}
+#quickactions .quick-action-box-container {
+    text-align:justify;
+}
+#quickactions .quick-actions-heading span.icon {
+    display:inline-block;
+    width:20px;
+    height:22px;
+    margin:0 10px 0 0;
+    background:url(./img/quickactions.png);
+    vertical-align:-5px;
+}
+#quickactions .quick-action-box {
+    display:inline-block;
+    height:80px;
+    width:15%;
+    background: #a1a218;
+    /*max-width: 200px;*/
+}
+#quickactions .justifier {
+    width:99%;
+    height:0;
+    display:inline-block;
+}
+#quickactions .quick-action-box:hover {
+    background:#b4b547;
+    cursor:pointer;
+}
+#quickactions .quick-action-box.active,
+#quickactions .quick-action-box.active:hover {
+    background:#e7bf00;
+}
+#quickactions .quick-action-box p {
+    margin:0;
+}
+#quickactions .quick-action-box p span.ellipsis {
+    display:none;
+}
+/*#quickactions .disabled
+{
+    background-color:#929497 !important;
+}*/
+@media all and (max-width:1280px) {
+    /* Abbreviation to allow narrow quick action boxes. */
+    #quickactions .quick-action-box p span.ellipsis { display:inline; }
+    #quickactions .quick-action-box p span.abbr { display:none; }
+}
+#quickactions .quick-action-box .quick-action-box-icon {
+    width:100%;
+    height:35px;
+    margin-top:5px;
+}
+#quickactions .source-management {
+    background:url(./img/key.png) no-repeat center ;
+}
+#quickactions .source-accounts {
+    background:url(./img/source-accounts.png) no-repeat center ;
+}
+#quickactions .template-management {
+    background:url(./img/transformation-template-management.png) no-repeat center ;
+}
+#quickactions .documents {
+    background:url(./img/document.png) no-repeat center ;
+}
+#quickactions .views-management {
+    background:url(./img/reporting-views-management.png) no-repeat center ;
+}
+#quickactions .user-management {
+    background:url(./img/user-management.png) no-repeat center ;
+}
+#quickactions .source-management, #quickactions .user-management, #quickactions .views-management,#quickactions .documents, #quickactions .template-management, #quickactions .source-accounts, #quickactions .source-management {
+    background-size:50px auto;
+}
+#quickactions .quick-action-box-text {
+    color:#f5f5f5;   
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 1.1;
+    text-align:center;
+}
+
+

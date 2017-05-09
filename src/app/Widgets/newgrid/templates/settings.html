@@ -1,0 +1,33 @@
+﻿<div class="" data-ng-controller="gridSettingsCtrl">
+    <toaster-container toaster-options="{{toasterOption}}"></toaster-container>
+    <p class="gridheading">Select settings for the widget</p>
+    <div class="clearfix"></div>
+    <div class="gran-header">
+        <label class="label-bold">Granularity:</label>
+        <select id="granularityList" data-chosen="" data-ng-change="granularityOnChange()" data-ng-model="metaDataAdapter.granularity.selected" data-ng-options="granularityType.name for granularityType in  metaDataAdapter.granularity">           
+        </select>
+    </div>
+    <div class='clearfix'></div>
+    <ang-accordion one-at-a-time="true" close-icon-class="fa fa-angle-right" open-icon-class="fa fa-angle-down" icon-position="left">
+        <collapsible-item title='Select Columns' initially-open="true">        
+            <div data-ng-grid="gridOptions" class="settings-grid"></div>
+        </collapsible-item>
+        <collapsible-item title='Grid Settings'>        
+            <div>
+            <label class="checkbox checkalignment"><input type="checkbox" data-ng-checked="settingsData.gridOption.enableHorizontalScrollbar == 0 ? false : true" data-ng-click="updateHScrollOption($event)" id="chkEnableHorizontalScrollbar">Enable Horizontal Scrolling</label>        
+            <label class="checkbox checkalignment"><input type="checkbox" data-ng-checked="settingsData.gridOption.enableVerticalScrollbar == 0 ? false : true" data-ng-click="updateVScrollOption($event)" id="chkEnableVerticalScrollbar">Enable Vertical Scrolling</label>
+        
+            <label class="checkbox checkalignment"><input type="checkbox" data-ng-model="settingsData.gridOption.enableSorting" data-ng-checked="settingsData.gridOption.enableSorting" id="chkEnableSorting">Enable Sorting</label>
+        
+            <label class="checkbox checkalignment"><input type="checkbox" data-ng-model="settingsData.gridOption.enablePaging" data-ng-checked="settingsData.gridOption.enablePaging" id="chkEnablePaging">Enable Pagination</label>
+        
+            <label class="checkbox checkalignment"><input type="checkbox" data-ng-model="settingsData.gridOption.enableFiltering" data-ng-checked="settingsData.gridOption.enableFiltering" id="chkEnableFiltering">Enable Inline Filter</label>
+            </div>
+        </collapsible-item>
+    </ang-accordion>   
+    <div class="clearfix"></div>
+    <div class="add-form-btn">
+        <button data-ng-click="save()" class="delete-btn common-btn">SAVE</button>
+        <button data-ng-click="closeModal()" class="btn-lg verify-btn common-btn">CLOSE</button>
+    </div>
+</div>

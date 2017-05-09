@@ -136,7 +136,7 @@ body.modal-open {
 }
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
     color: #fff;
-    background-color: #e7bf00;
+    background-color: #e7bf00 !important;
 }
 .nav-pills > li > a {
     padding-top: 8px;

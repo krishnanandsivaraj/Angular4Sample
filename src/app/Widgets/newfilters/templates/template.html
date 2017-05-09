@@ -1,0 +1,73 @@
+<div class="tempborder">
+    <div class="row-fluid">
+        <div class="col-md-11 filterPadding">
+            <span data-ng-repeat="filter in filters | orderBy:'orderBy'" class="filter-box">
+                <span class="filter-label">{{displayname}}:</span>
+                <select data-chosen="filter" 
+                        data-ng-change="filterChange(filter)">
+                        <option *ngFor="let workout of displaynames">{{workout}}</option></select>
+            </span>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="row-fluid">
+        
+            <div class="granularity-widget" style="float:left;">
+                <div class="table-tabs granularityOptions">
+                    <div class="pull-left">
+                        <span class="gran">Select a reporting view:</span>
+                        <ul class="nav nav-pills selectnav">
+                            <li *ngFor="let granularity of granularities" [ngClass]="selected == true ? 'active' : ''">
+                                <a data-toggle="pill" (click)="selectGranularity(granularity)">{{granularity}}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="col-md-6 calendar-widget" style="float:right;">
+            <div class="table-tabs calender-div">
+                <div style="margin-top: 15px;" class="date-selection pull-right">
+                    <div>
+                        <div [ngClass]="{true:'cshow', false:'chide'}[DAILYCALENDER]">
+                            Select Date:
+                            <input type="text" class="dailydatepicker" daydatepicker id="daydatepicker" />
+                        </div>
+                        <div [ngClass]="{true:'cshow', false:'chide'}[WEEKLYCALENDER]">
+                            Select Week:
+                            <input type="text" class="weeklydatepicker" weekdatepicker id="weekdatepicker" />
+                        </div>
+                        <div [ngClass]="{true:'cshow', false:'chide'}[MONTHLYCALENDER]">
+                            Select Month:
+                            <input type="text" class="monthlydatepicker" monthdatepicker id="monthdatepicker" />
+                        </div>
+                        <div [ngClass]="{true:'cshow', false:'chide'}[MTDCALENDER]">
+                            Select Year:
+                            <input type="text" class="yearlydatepicker" yeardatepicker id="yeardatepicker" />
+                        </div>
+                        <div [ngClass]="{true:'cshow', false:'chide'}[YTDCALENDER]">
+                            Select Date:
+                            <input type="text" class="mtddatepicker" mtddatepicker id="mtddatepicker" />
+                        </div>
+                        <!--<div [ngClass]="{true:'cshow', false:'chide'}[showYtdCalendar]">
+                            Select Date:
+                            <input type="text" class="ytddatepicker" data-ng-model="ytddatepicker" ytddatepicker id="ytddatepicker" data-ng-change="changeGranularity('ytd',ytddatepicker)" />
+                        </div>-->
+                        <!--<div [ngClass]="{true:'cshow', false:'chide'}[showYtdMonthCalendar]">
+                            Select Month:
+                            <input type="text" class="ytdmonthpicker" data-ng-model="ytdmonthpicker" ytdmonthpicker id="ytdmonthpicker" data-ng-change="changeGranularity('ytdmonth',ytdmonthpicker)" />
+                        </div>
+                        <div [ngClass]="{true:'cshow', false:'chide'}[showMtdWeeklyCalendar]">
+                            Select Week:
+                            <input type="text" class="mtdweekdatepicker" data-ng-model="mtdweekdatepicker" mtdweekdatepicker id="mtdweekdatepicker" data-ng-change="changeGranularity('mtdweekly',mtdweekdatepicker)" />
+                        </div>
+                        <div [ngClass]="{true:'cshow', false:'chide'}[showYtdWeeklyCalendar]">
+                            Select Week:
+                            <input type="text" class="ytdweekdatepicker" data-ng-model="ytdweekdatepicker" ytdweekdatepicker id="ytdweekdatepicker" data-ng-change="changeGranularity('ytdweekly',ytdweekdatepicker)" />
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix">...</div>

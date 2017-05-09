@@ -1,0 +1,633 @@
+<!--<div class="progress-relative grid-progess">
+    <div data-progress-notification="inProgress">
+        <div class="exportarea grid-container" data-widget-id="grid">
+            <div data-ui-grid="dataSource" data-ng-show="data.length" data-ui-grid-expandable="" data-ui-grid-pagination="" data-ui-grid-exporter="" data-ui-grid-auto-resize=""></div>
+            <p data-ng-show="!data.length"><span>No records found.</span></p>
+        </div>
+    </div>
+</div>-->
+	<div class="ui-grid-render-container ng-isolate-scope ui-grid-render-container-body" col-container-name="'body'" container-id="'body'" enable-horizontal-scrollbar="grid.options.enableHorizontalScrollbar" enable-vertical-scrollbar="grid.options.enableVerticalScrollbar" row-container-name="'body'" ui-grid-render-container="">
+		<div class="ui-grid-header ng-scope">
+			<div class="ui-grid-top-panel">
+				<div class="ui-grid-header-viewport">
+					<div class="ui-grid-header-canvas">
+						<div class="ui-grid-header-cell-wrapper">
+							<div class="ui-grid-header-cell-row">
+								<div class="ui-grid-header-cell ui-grid-clearfix ng-scope ng-isolate-scope ui-grid-coluiGrid-03H" col="col" ui-grid-header-cell="">
+									<div class="ng-scope" NgClass="{ 'sortable': sortable }">
+										<div class="ui-grid-cell-contents" col-index="renderIndex">
+											<span class="ng-binding">Sales Channel</span> <span class="ui-grid-invisible ui-grid-icon-blank" NgClass="{ 'ui-grid-icon-up-dir': col.sort.direction == asc, 'ui-grid-icon-down-dir': col.sort.direction == desc, 'ui-grid-icon-blank': !col.sort.direction }" ui-grid-visible="col.sort.direction">&nbsp;</span>
+										</div>
+									</div>
+								</div>
+								<div class="ui-grid-header-cell ui-grid-clearfix ng-scope ng-isolate-scope ui-grid-coluiGrid-03I" col="col" render-index="$index" ui-grid-header-cell="">
+									<div class="ng-scope" NgClass="{ 'sortable': sortable }">
+
+										<div class="ui-grid-cell-contents" col-index="renderIndex">
+											<span class="ng-binding">Trip Breaks Revenue</span> <span class="ui-grid-invisible ui-grid-icon-blank" ng-class="{ 'ui-grid-icon-up-dir': col.sort.direction == asc, 'ui-grid-icon-down-dir': col.sort.direction == desc, 'ui-grid-icon-blank': !col.sort.direction }" ui-grid-visible="col.sort.direction">&nbsp;</span>
+										</div>
+										<!-- ngIf: grid.options.enableColumnMenus && !col.isRowHeader  && col.colDef.enableColumnMenu !== false --><!-- ngRepeat: colFilter in col.filters --><!-- ngIf: filterable --><!-- end ngRepeat: colFilter in col.filters -->
+									</div>
+								</div>
+								<!-- end ngRepeat: col in colContainer.renderedColumns track by col.colDef.name -->
+
+								<div class="ui-grid-header-cell ui-grid-clearfix ng-scope ng-isolate-scope ui-grid-coluiGrid-03J" col="col" ng-repeat="col in colContainer.renderedColumns track by col.colDef.name" render-index="$index" ui-grid-header-cell="">
+									<div class="ng-scope" ng-class="{ 'sortable': sortable }">
+										<!-- <div class="ui-grid-vertical-bar">&nbsp;</div> -->
+
+										<div class="ui-grid-cell-contents" col-index="renderIndex">
+											<span class="ng-binding">Revenue YoY ∆</span> <span class="ui-grid-invisible ui-grid-icon-blank" ng-class="{ 'ui-grid-icon-up-dir': col.sort.direction == asc, 'ui-grid-icon-down-dir': col.sort.direction == desc, 'ui-grid-icon-blank': !col.sort.direction }" ui-grid-visible="col.sort.direction">&nbsp;</span>
+										</div>
+										<!-- ngIf: grid.options.enableColumnMenus && !col.isRowHeader  && col.colDef.enableColumnMenu !== false --><!-- ngRepeat: colFilter in col.filters --><!-- ngIf: filterable --><!-- end ngRepeat: colFilter in col.filters -->
+									</div>
+								</div>
+								<!-- end ngRepeat: col in colContainer.renderedColumns track by col.colDef.name -->
+
+								<div class="ui-grid-header-cell ui-grid-clearfix ng-scope ng-isolate-scope ui-grid-coluiGrid-03K" col="col" ng-repeat="col in colContainer.renderedColumns track by col.colDef.name" render-index="$index" ui-grid-header-cell="">
+									<div class="ng-scope" ng-class="{ 'sortable': sortable }">
+										<!-- <div class="ui-grid-vertical-bar">&nbsp;</div> -->
+
+										<div class="ui-grid-cell-contents" col-index="renderIndex">
+											<span class="ng-binding">Avg.Fare (Trip Break)</span> <span class="ui-grid-invisible ui-grid-icon-blank" ng-class="{ 'ui-grid-icon-up-dir': col.sort.direction == asc, 'ui-grid-icon-down-dir': col.sort.direction == desc, 'ui-grid-icon-blank': !col.sort.direction }" ui-grid-visible="col.sort.direction">&nbsp;</span>
+										</div>
+										<!-- ngIf: grid.options.enableColumnMenus && !col.isRowHeader  && col.colDef.enableColumnMenu !== false --><!-- ngRepeat: colFilter in col.filters --><!-- ngIf: filterable --><!-- end ngRepeat: colFilter in col.filters -->
+									</div>
+								</div>
+								<!-- end ngRepeat: col in colContainer.renderedColumns track by col.colDef.name -->
+
+								<div class="ui-grid-header-cell ui-grid-clearfix ng-scope ng-isolate-scope ui-grid-coluiGrid-03L" col="col" ng-repeat="col in colContainer.renderedColumns track by col.colDef.name" render-index="$index" ui-grid-header-cell="">
+									<div class="ng-scope" ng-class="{ 'sortable': sortable }">
+										<!-- <div class="ui-grid-vertical-bar">&nbsp;</div> -->
+
+										<div class="ui-grid-cell-contents" col-index="renderIndex">
+											<span class="ng-binding">Avg.Fare YoY ∆ (%)</span> <span class="ui-grid-invisible ui-grid-icon-blank" ng-class="{ 'ui-grid-icon-up-dir': col.sort.direction == asc, 'ui-grid-icon-down-dir': col.sort.direction == desc, 'ui-grid-icon-blank': !col.sort.direction }" ui-grid-visible="col.sort.direction">&nbsp;</span>
+										</div>
+										<!-- ngIf: grid.options.enableColumnMenus && !col.isRowHeader  && col.colDef.enableColumnMenu !== false --><!-- ngRepeat: colFilter in col.filters --><!-- ngIf: filterable --><!-- end ngRepeat: colFilter in col.filters -->
+									</div>
+								</div>
+								<!-- end ngRepeat: col in colContainer.renderedColumns track by col.colDef.name -->
+
+								<div class="ui-grid-header-cell ui-grid-clearfix ng-scope ng-isolate-scope ui-grid-coluiGrid-03M" col="col" ng-repeat="col in colContainer.renderedColumns track by col.colDef.name" render-index="$index" ui-grid-header-cell="">
+									<div class="ng-scope" ng-class="{ 'sortable': sortable }">
+										<!-- <div class="ui-grid-vertical-bar">&nbsp;</div> -->
+
+										<div class="ui-grid-cell-contents" col-index="renderIndex">
+											<span class="ng-binding">Trip Breaks</span> <span class="ui-grid-invisible ui-grid-icon-blank" ng-class="{ 'ui-grid-icon-up-dir': col.sort.direction == asc, 'ui-grid-icon-down-dir': col.sort.direction == desc, 'ui-grid-icon-blank': !col.sort.direction }" ui-grid-visible="col.sort.direction">&nbsp;</span>
+										</div>
+										<!-- ngIf: grid.options.enableColumnMenus && !col.isRowHeader  && col.colDef.enableColumnMenu !== false --><!-- ngRepeat: colFilter in col.filters --><!-- ngIf: filterable --><!-- end ngRepeat: colFilter in col.filters -->
+									</div>
+								</div>
+								<!-- end ngRepeat: col in colContainer.renderedColumns track by col.colDef.name -->
+
+								<div class="ui-grid-header-cell ui-grid-clearfix ng-scope ng-isolate-scope ui-grid-coluiGrid-03N" col="col" ng-repeat="col in colContainer.renderedColumns track by col.colDef.name" render-index="$index" ui-grid-header-cell="">
+									<div class="ng-scope" ng-class="{ 'sortable': sortable }">
+										<!-- <div class="ui-grid-vertical-bar">&nbsp;</div> -->
+
+										<div class="ui-grid-cell-contents" col-index="renderIndex">
+											<span class="ng-binding">Trip Breaks YoY ∆ (%)</span> <span class="ui-grid-invisible ui-grid-icon-blank" ng-class="{ 'ui-grid-icon-up-dir': col.sort.direction == asc, 'ui-grid-icon-down-dir': col.sort.direction == desc, 'ui-grid-icon-blank': !col.sort.direction }" ui-grid-visible="col.sort.direction">&nbsp;</span>
+										</div>
+										<!-- ngIf: grid.options.enableColumnMenus && !col.isRowHeader  && col.colDef.enableColumnMenu !== false --><!-- ngRepeat: colFilter in col.filters --><!-- ngIf: filterable --><!-- end ngRepeat: colFilter in col.filters -->
+									</div>
+								</div>
+								<!-- end ngRepeat: col in colContainer.renderedColumns track by col.colDef.name -->
+
+								<div class="ui-grid-header-cell ui-grid-clearfix ng-scope ng-isolate-scope ui-grid-coluiGrid-03O" col="col" ng-repeat="col in colContainer.renderedColumns track by col.colDef.name" render-index="$index" ui-grid-header-cell="">
+									<div class="ng-scope" ng-class="{ 'sortable': sortable }">
+										<!-- <div class="ui-grid-vertical-bar">&nbsp;</div> -->
+
+										<div class="ui-grid-cell-contents" col-index="renderIndex">
+											<span class="ng-binding">Trip Break Channel Share</span> <span class="ui-grid-invisible ui-grid-icon-blank" ng-class="{ 'ui-grid-icon-up-dir': col.sort.direction == asc, 'ui-grid-icon-down-dir': col.sort.direction == desc, 'ui-grid-icon-blank': !col.sort.direction }" ui-grid-visible="col.sort.direction">&nbsp;</span>
+										</div>
+										<!-- ngIf: grid.options.enableColumnMenus && !col.isRowHeader  && col.colDef.enableColumnMenu !== false --><!-- ngRepeat: colFilter in col.filters --><!-- ngIf: filterable --><!-- end ngRepeat: colFilter in col.filters -->
+									</div>
+								</div>
+								<!-- end ngRepeat: col in colContainer.renderedColumns track by col.colDef.name -->
+
+								<div class="ui-grid-header-cell ui-grid-clearfix ng-scope ng-isolate-scope ui-grid-coluiGrid-03P" col="col" ng-repeat="col in colContainer.renderedColumns track by col.colDef.name" render-index="$index" ui-grid-header-cell="">
+									<div class="ng-scope" ng-class="{ 'sortable': sortable }">
+										<!-- <div class="ui-grid-vertical-bar">&nbsp;</div> -->
+
+										<div class="ui-grid-cell-contents" col-index="renderIndex">
+											<span class="ng-binding">Chnl.Share YoY ∆ (pts.)</span> <span class="ui-grid-invisible ui-grid-icon-blank" ng-class="{ 'ui-grid-icon-up-dir': col.sort.direction == asc, 'ui-grid-icon-down-dir': col.sort.direction == desc, 'ui-grid-icon-blank': !col.sort.direction }" ui-grid-visible="col.sort.direction">&nbsp;</span>
+										</div>
+										<!-- ngIf: grid.options.enableColumnMenus && !col.isRowHeader  && col.colDef.enableColumnMenu !== false --><!-- ngRepeat: colFilter in col.filters --><!-- ngIf: filterable --><!-- end ngRepeat: colFilter in col.filters -->
+									</div>
+								</div>
+								<!-- end ngRepeat: col in colContainer.renderedColumns track by col.colDef.name -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="ng-isolate-scope" ui-grid-menu="">
+					<!-- ngIf: shown -->
+				</div>
+			</div>
+		</div>
+
+
+		<div class="ui-grid-viewport ng-isolate-scope" ng-style="colContainer.getViewPortStyle()" style="overflow: hidden;" ui-grid-viewport="">
+			<div class="ui-grid-canvas">
+				<!-- ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index -->
+
+				<div class="ui-grid-row ng-scope" ng-class="{'ui-grid-row-selected': row.isSelected}" ng-repeat="(rowRenderIndex, row) in rowContainer.renderedRows track by $index" ng-style="Viewport.rowStyle(rowRenderIndex)">
+					<div class="ng-isolate-scope" row-render-index="rowRenderIndex" ui-grid-row="row">
+						<!-- ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03H" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding" title="Online Direct">
+								Online Direct
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03I grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								$0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03J grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03K grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								$0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03L grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03M grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03N grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03O grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								0.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03P grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-37.27
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+					</div>
+					<!-- ngIf: expandableRow.shouldRenderExpand() --><!-- ngIf: expandableRow.shouldRenderFiller() -->
+				</div>
+				<!-- end ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index -->
+
+				<div class="ui-grid-row ng-scope" ng-class="{'ui-grid-row-selected': row.isSelected}" ng-repeat="(rowRenderIndex, row) in rowContainer.renderedRows track by $index" ng-style="Viewport.rowStyle(rowRenderIndex)">
+					<div class="ng-isolate-scope" row-render-index="rowRenderIndex" ui-grid-row="row">
+						<!-- ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03H" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding" title="Offline Direct">
+								Offline Direct
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03I grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								$0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03J grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03K grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								$0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03L grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03M grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03N grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03O grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								0.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03P grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-5.50
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+					</div>
+					<!-- ngIf: expandableRow.shouldRenderExpand() --><!-- ngIf: expandableRow.shouldRenderFiller() -->
+				</div>
+				<!-- end ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index -->
+
+				<div class="ui-grid-row ng-scope" ng-class="{'ui-grid-row-selected': row.isSelected}" ng-repeat="(rowRenderIndex, row) in rowContainer.renderedRows track by $index" ng-style="Viewport.rowStyle(rowRenderIndex)">
+					<div class="ng-isolate-scope" row-render-index="rowRenderIndex" ui-grid-row="row">
+						<!-- ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03H" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding" title="Online Agency">
+								Online Agency
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03I grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								$0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03J grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03K grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								$0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03L grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03M grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03N grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03O grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								0.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03P grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-15.12
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+					</div>
+					<!-- ngIf: expandableRow.shouldRenderExpand() --><!-- ngIf: expandableRow.shouldRenderFiller() -->
+				</div>
+				<!-- end ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index -->
+
+				<div class="ui-grid-row ng-scope" ng-class="{'ui-grid-row-selected': row.isSelected}" ng-repeat="(rowRenderIndex, row) in rowContainer.renderedRows track by $index" ng-style="Viewport.rowStyle(rowRenderIndex)">
+					<div class="ng-isolate-scope" row-render-index="rowRenderIndex" ui-grid-row="row">
+						<!-- ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03H" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding" title="Offline Agency">
+								Offline Agency
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03I grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								$0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03J grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03K grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								$0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03L grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03M grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03N grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03O grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								0.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03P grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-42.09
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+					</div>
+					<!-- ngIf: expandableRow.shouldRenderExpand() --><!-- ngIf: expandableRow.shouldRenderFiller() -->
+				</div>
+				<!-- end ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index -->
+
+				<div class="ui-grid-row ng-scope" ng-class="{'ui-grid-row-selected': row.isSelected}" ng-repeat="(rowRenderIndex, row) in rowContainer.renderedRows track by $index" ng-style="Viewport.rowStyle(rowRenderIndex)">
+					<div class="ng-isolate-scope" row-render-index="rowRenderIndex" ui-grid-row="row">
+						<!-- ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03H" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding" title="Grand Total">
+								Grand Total
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03I grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								$0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03J grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03K grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								$0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03L grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03M grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03N grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03O grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								0.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03P grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								0.00
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+					</div>
+					<!-- ngIf: expandableRow.shouldRenderExpand() --><!-- ngIf: expandableRow.shouldRenderFiller() -->
+				</div>
+				<!-- end ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index -->
+
+				<div class="ui-grid-row ng-scope" ng-class="{'ui-grid-row-selected': row.isSelected}" ng-repeat="(rowRenderIndex, row) in rowContainer.renderedRows track by $index" ng-style="Viewport.rowStyle(rowRenderIndex)">
+					<div class="ng-isolate-scope" row-render-index="rowRenderIndex" ui-grid-row="row">
+						<!-- ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03H" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding" title="Direct">
+								Direct
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03I grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								$0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03J grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03K grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								$0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03L grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03M grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03N grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03O grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								0.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03P grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-42.78
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+					</div>
+					<!-- ngIf: expandableRow.shouldRenderExpand() --><!-- ngIf: expandableRow.shouldRenderFiller() -->
+				</div>
+				<!-- end ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index -->
+
+				<div class="ui-grid-row ng-scope" ng-class="{'ui-grid-row-selected': row.isSelected}" ng-repeat="(rowRenderIndex, row) in rowContainer.renderedRows track by $index" ng-style="Viewport.rowStyle(rowRenderIndex)">
+					<div class="ng-isolate-scope" row-render-index="rowRenderIndex" ui-grid-row="row">
+						<!-- ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03H" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding" title="InDirect">
+								InDirect
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03I grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								$0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03J grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03K grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								$0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03L grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03M grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								0
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03N grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-100.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03O grid-number-align" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								0.00%
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+
+						<div class="ui-grid-cell ng-scope ui-grid-coluiGrid-03P grid-number-align-nagative" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" ui-grid-cell="">
+							<div class="ui-grid-cell-contents ng-scope ng-binding">
+								-57.21
+							</div>
+						</div>
+						<!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+					</div>
+					<!-- ngIf: expandableRow.shouldRenderExpand() --><!-- ngIf: expandableRow.shouldRenderFiller() -->
+				</div>
+				<!-- end ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index -->
+			</div>
+		</div>
+		<!-- ngIf: grid.options.showColumnFooter -->
+	</div>

@@ -1,0 +1,36 @@
+*
+{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+
+.breadcrumb {
+    background: none;
+    margin: 0 0;
+}
+
+.breadcrumb a {
+        color: #e7bf00;
+ }
+
+.breadcrumb > li {
+    text-shadow: none;
+}
+
+/*.borderclass .tempborder {
+    border: 2px dashed #ccc;
+    margin-bottom: 10px;
+}*/
+.breadcrumb {
+    padding: 8px 0;
+}
+.breadcrumb + a.pos .configBtn {
+    display:none;
+}
+/*added on 15-12-2015*/
+.container-fluid .breadcrumb
+{
+    margin: 0 0 16px 0;
+}

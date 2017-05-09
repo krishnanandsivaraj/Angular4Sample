@@ -1,110 +1,102 @@
-import { Component,Injectable  } from '@angular/core';
-import { JsonpModule, Jsonp,Http, Response, Headers, RequestOptions } from '@angular/http';
-
+import { services } from '../../../../scripts/app/services';
+import { Utitilities } from './../../../../scripts/app/utilities';
+import { DataAdapter } from './../../../../scripts/app/dataadapter';
+import { baseApiUrl } from './../../../../scripts/app/appsettings';
+import { Component, Injectable, OnInit } from '@angular/core';
+import { Jsonp } from '@angular/http';
 import {Router} from '@angular/router';
 import 'rxjs/add/operator/map';
-// import{Responsee} from './response';
-import {Observable} from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/do';
 
-class Responsee {
-  constructor(public result: string,
-              public success: boolean){
-}
-}
-class ResponseeSuccessResult {
-  constructor(public result: ResponseeSuccess,
-              public success: boolean){
-}
-}
+import{ResponseeSuccessResult} from './modals/ResponseeSuccessResult';
+import{ResponseeSuccess} from './modals/ResponseeSuccess';
+import{Clients} from './modals/Clients';
+import{Responsee} from './modals/Responsee';
+import { DialogService } from 'ng2-bootstrap-modal';
+import { PopupComponent } from './../agents/scripts/agents';
 
-class ResponseeSuccess {
-  constructor(public apiKey: string,
-              public AuditDate:string,
-              public Clients:Array<Clients>,
-              public CreateDate:string,
-              public emailAddress:string,
-              public firstName:string,
-              public isActive:boolean,
-              public isExistingUser:boolean,
-              public isLastLogin:string,
-              public lastName:string,
-              public Subscriptions:Array<Subscriptions>,
-              public success: boolean){
-}
-}
-
-class Clients{
-    constructor(public displayName:string,
-                public name:string,
-                public weekstartday:string){
-}
-}
-class Subscriptions{
-    constructor(public source:string[],
-                public destination:string[],
-                public id:string){
-}
-}
 @Component({
     selector: 'login-tab',
     styleUrls:['./login.css'],
-    templateUrl:'./login.html'
+    templateUrl: './login.html',
+    providers: [DataAdapter, Utitilities]
 })
 
 
 
 @Injectable()
-export class LoginComponent{
-    constructor(private router: Router,private jsonp: Jsonp){
-		  
-	};
+export class LoginComponent implements OnInit {
+    private SuccessResponse: ResponseeSuccess;
+    private SuccessResponseResult: ResponseeSuccessResult;
+    public Products: Responsee;
+    public clients: Array<Clients>;
+    private baseapi= baseApiUrl;
+    public loading: boolean = false;
+    public loadingImage: boolean= true;
+    public error: string;
+    public errorstatus: boolean= false;
+    // private clientsName: PopupComponent;
+    constructor(private router: Router, private jsonp: Jsonp, private da: DataAdapter,
+    private dialogService: DialogService,private clientsName: PopupComponent ) { };
 
-
-
-    private username:string;
-    private password:string;
-    private result:any;
-    private url:string;
-    private SuccessResponse:ResponseeSuccess;
-    private SuccessResponseResult:ResponseeSuccessResult;
-    public Products:Responsee;
-    public clients:Array<Clients>;
-    //parentRouter:any
-login()
+login(username: string, password: string)
 {
-    var LoginUrl="http://v2qaservice.tapestrykpi.com/authentication/login?method=__ng_jsonp__.__req0.finished&loginTime=%222017-04-19T12:19:46.014Z%22&password="+this.password+"&username="+this.username+"&callback=JSONP_CALLBACK";
-
-        this.jsonp.request(LoginUrl)
+    this.loading = true;
+  let result =  this.da.CreateDataSource(this.baseapi, username, password);
+        this.jsonp.request(result)
         .map(res => {
             console.log(res.json());
           return <ResponseeSuccessResult>res.json()
-        }).subscribe((products:ResponseeSuccessResult) => {
+        }).subscribe((products: ResponseeSuccessResult) => {
        this.SuccessResponseResult = products;
-       this.SuccessResponse=<ResponseeSuccess>this.SuccessResponseResult.result;
-       this.clients=this.SuccessResponse["clients"];
-       console.log("This response is: "+JSON.stringify(this.clients[0].displayName));
+       this.SuccessResponse = <ResponseeSuccess>this.SuccessResponseResult.result;
+        if (this.SuccessResponse.isExistingUser === true) {
+        this.loading = false;
+        this.clients = this.SuccessResponse[ 'clients' ];
+        this.errorstatus= false;
+        this.loadingImage = true;
+        this.loading = false;
+        this.showConfirm(this.clients);
+        }else
+        {
+        this.loading = true;
+        this.errorstatus= true;
+        this.loadingImage = false;
+        this.error = 'Incorrect UserName and Password!!';
+        }
+
+       // console.log('This response is: ' + JSON.stringify(this.clients[0].displayName));
     });
 }
+ngOnInit(): void {
+        setTimeout(function() {
+       this.loading = false;
+       console.log(this.loading);
+   }.bind(this), 3000);
+    }
 
+showConfirm(clients: Clients[]) {
+            this.clientsName.showClients(clients);
+            let disposable = this.dialogService.addDialog(PopupComponent, {
+                title: 'Confirm title',
+                message: 'Confirm message'})
+                .subscribe((isConfirmed)=>{
+                    // We get dialog result
+                    if(isConfirmed) {
 
-onUserNameKeyPress(username:string)
-{
-    this.username=username;
-}
-
-onPasswordKeyPress(password:string)
-{
-    this.password=password;
-}
-
-Navigate()
-{
-        this.router.navigate(['./dashboard']);
-}
-
+                    }
+                    else {
+                        alert('declined');
+                    }
+                });
+            // We can close dialog calling disposable.unsubscribe();
+            // If dialog was not closed manually close it by timeout
+            // setTimeout(()=>{
+            //     disposable.unsubscribe();
+            // }, 10000);
+        }
 }

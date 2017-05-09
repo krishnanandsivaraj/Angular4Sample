@@ -1,0 +1,34 @@
+﻿<div data-ng-controller="graphSettingsCtrl">
+    <toaster-container toaster-options="{{toasterOption}}"></toaster-container>
+    <p class="gridheading">Select settings for the graph widget</p>
+    <div class="clearfix"></div>
+    <div class="gran-header">
+        <label class="label-bold">Granularity:</label>
+        <select id="granularityList" data-chosen="" data-ng-change="granularityOnChange()" data-ng-model="metaDataAdapter.granularity.selected" data-ng-options="granularityType.name for granularityType in  metaDataAdapter.granularity">
+        </select>
+    </div><div class='clearfix'></div>
+    <div class="gran-header">
+                <label class="label-bold">Graph Type:</label>
+                <select id="graphType" data-chosen="metaDataGranulariry.metaData.graphType" data-ng-model="settingsData.metaData.graphType[0].value" data-ng-options="graphType.value as graphType.text for graphType in  metaDataGranulariry.metaData.graphType"></select>
+            </div>
+    <div class='clearfix'></div>
+    <ang-accordion one-at-a-time="true" close-icon-class="fa fa-angle-right" open-icon-class="fa fa-angle-down" icon-position="left">
+        <!--<collapsible-item title='Select Graph Type' initially-open="true">        
+            <div class="gran-header">
+                <label class="label-bold">Graph Type:</label>
+                <select id="graphType" data-chosen="metaDataGranulariry.metaData.graphType" data-ng-model="settingsData.metaData.graphType[0].value" data-ng-options="graphType.value as graphType.text for graphType in  metaDataGranulariry.metaData.graphType"></select>
+            </div>
+        </collapsible-item>-->
+        <collapsible-item title='Metrics Settings'>        
+            <div data-ng-grid="graphOptionsMetrics" class="settings-grid"></div>
+        </collapsible-item>
+		 <collapsible-item title='Quickview Settings'>        
+           <div data-ng-grid="graphOptionsQuickView" class="settings-grid"></div>
+        </collapsible-item>
+    </ang-accordion>
+    <div class="clearfix"></div>
+    <div class="add-form-btn">
+        <button data-ng-click="save()" class="delete-btn common-btn">SAVE</button>
+        <button data-ng-click="closeModal()" class="btn-lg verify-btn common-btn">CLOSE</button>
+    </div>
+</div>

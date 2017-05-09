@@ -1,0 +1,31 @@
+﻿<div data-ng-controller="filterSettingsCtrl">
+    <toaster-container toaster-options="{{toasterOption}}"></toaster-container>
+    <p class="gridheading">Select settings for the filter widget</p>
+    <div class="clearfix"></div>
+    <ang-accordion one-at-a-time="true" close-icon-class="fa fa-angle-right" open-icon-class="fa fa-angle-down" icon-position="left">
+        <collapsible-item title='Filters' initially-open="true">        
+             <div class="gran-header">   
+                 <div data-ng-grid="gridOptions" class="settings-grid"></div>     
+             </div>
+        </collapsible-item>      
+		 <!--<collapsible-item title='Granularity'>        
+             <div class="gran-header">               
+               <label ng-repeat="granularity in metaData.filters[0].granularities">
+                    <input type="checkbox" checklist-model="settings.widget.controller.data.granularities" checklist-value="granularity"> {{granularity.displayName}}
+               </label>
+             </div>
+        </collapsible-item>  
+ <collapsible-item title='Date'>        
+             <div class="gran-header">           
+                <label ng-repeat="date in metaData.filters[0].date">
+                    <input type="checkbox" checklist-model="settings.widget.controller.data.date" checklist-value="date"> {{date.displayName}}
+               </label>
+             </div>
+        </collapsible-item>-->     		
+    </ang-accordion>
+    <div class="clearfix"></div>
+    <div class="add-form-btn">
+        <button data-ng-click="save()" class="delete-btn common-btn">SAVE</button>
+        <button data-ng-click="closeModal()" class="btn-lg verify-btn common-btn">CLOSE</button>
+    </div>
+</div>

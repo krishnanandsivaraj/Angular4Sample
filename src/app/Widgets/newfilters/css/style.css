@@ -1,0 +1,169 @@
+/*.borderclass .tempborder {
+    border: 2px dashed #ccc;
+    margin-bottom: 10px;
+    overflow: hidden;
+}*/
+
+.granularity-widget .table-tabs {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.modal-body {
+    position: relative;
+    padding: 15px;
+}
+.granularity-widget table-tabs ul {
+    display: inline-block;
+    margin-left: 5px;
+}
+.checkwidth {width:auto !important;margin-top: 8px !important;margin-left: 39px !important;}
+
+.granularity-widget .table-tabs ul {
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 17px;
+}
+
+.gran {
+    margin-bottom: -5px;
+    float: left;
+    margin-top: 18px;
+}
+
+.granularityOptions {
+    overflow: auto;
+}
+
+.granularity-widget .table-tabs ul li.active a:after {
+    border-left: 10px solid rgba(0, 0, 0, 0);
+    border-right: 10px solid rgba(0, 0, 0, 0);
+    border-top: 10px solid #E7BF00;
+    content: "";
+    display: inline-block;
+    left: 50%;
+    margin-left: -10px;
+    position: absolute;
+    top: 27px;
+}
+
+.granularity-widget .ico-btn-more {
+    background: url(../img/global-sprite.png) -80px -183px no-repeat;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    text-indent: -9999em;
+    margin: 0 0 0 20px;
+}
+
+.granularity-widget .table-tabs ul li a {
+    color: #A1A218;
+    position: relative;
+    font-weight: 400;
+}
+li a:hover{
+    background-color: #A1A218 !important;
+}
+.granula {
+    position:relative;padding:0 !important;
+}
+.calendar-widget{padding:0 !important;}
+.borderclass .granula + a.pos {
+    position:relative;
+}
+.borderclass .granula + a.pos .configBtn {
+    position:absolute;
+    top: 15px !important;
+}
+/*.borderclass .granularity-widget {
+    border: 2px dashed #ccc;
+    margin-bottom:10px;
+}*/
+
+.table-tabs {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+/*.collapsible-item .content {padding: 5px 20px !important;}*/
+.widgetframework label {float:none !important;display:inline-block;}
+/* DATE PICKER */
+input.datepicker {
+    width: 100px;
+    margin: 0 5px 5px;
+}
+input.dailydatepicker, input.weeklydatepicker, input.monthlydatepicker, input.yearlydatepicker, input.mtddatepicker, input.ytddatepicker, input.mtdweekdatepicker, input.ytdweekdatepicker, input.ytdmonthpicker, input.datepickerfrom, input.datepickerto {
+    width: 107px;
+    margin: 0 5px 5px;
+    height: 27px;
+    padding-left: 5px;
+    font-size: 13px;
+    border: 1px solid #aaa;
+    background-color: #F5F5F5;
+}
+.button.Zebra_DatePicker_Icon {
+    left: 100px !important;
+}
+.calender-div{
+	overflow:hidden;
+	
+}
+
+.cshow {
+    display: block;
+    float: right;
+}
+
+.chide {
+    display: none;
+    float: right;
+}
+.filter-calendar .table-tabs{
+    margin-top: 0px;
+}
+.filter-calendar .date-selection{
+    margin-top: 0px !important;
+}
+.span6.calendar-widget {
+    float:right;
+}
+.calendar-widget .table-tabs.calender-div {
+    margin-bottom:17px;
+}
+/*.borderclass .calendar-widget {
+    border: 2px dashed #ccc;
+    margin-bottom:10px;
+}*/
+.filter-box .chosen-choices, .chosen-container {
+    margin-right: 5px;
+    width: 110px !important;
+}
+.filter-box .chosen-choices, .chosen-container {
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    width: 18% !important;
+}
+.filter-label {
+    float: left;
+    margin-right: 10px;
+    padding-top: 3px;
+    
+}
+.filter-box:nth-child(3)::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.borderclass > .tempborder {
+    border: 2px dashed #ccc;
+    margin-bottom:10px;
+    padding-top:10px;
+}
+
+.filterPadding {
+    position:relative;padding:0 !important;
+}

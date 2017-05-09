@@ -3,7 +3,7 @@ app.directive('fbButton', ['utilityService',  function (utilityService) {
     return {
         restrict: 'E',
         transclude: true,
-        template: '<input type="image" data-ng-click="fblogin()" src="../../../../../img/admin-widget/fb-button.png"class="add-account-form-input" data-ng-required="connector.name==\'facebook\' && account.connectionType == \'api\'"  data-ng-model="account.accessToken"  name="accessToken"/>',
+        template: '<input type="image" data-ng-click="fblogin()" src="../../../../img/admin-widget/fb-button.png"class="add-account-form-input" data-ng-required="connector.name==\'facebook\' && account.connectionType == \'api\'"  data-ng-model="account.accessToken"  name="accessToken"/>',
         controller: function ($scope, $element) {
             (function (d, s, id) {
                 if (d.getElementById(id)) d.getElementById(id).remove();

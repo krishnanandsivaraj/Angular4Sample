@@ -1,0 +1,17 @@
+<!--<div class="progress-relative graph-progress">
+    <div class="graph-chart">
+        <div class="graph-select" data-ng-show="resultControllerConfig.metaData.metrics">
+            <label class="label-bold">Select Metrics:</label>
+            <select id="metricsList" data-chosen="resultControllerConfig.metaData.metrics" data-ng-change="metricsOnChange()" data-ng-model="resultControllerConfig.metaData.metrics.selected" data-ng-options="metric.id as metric.displayName for metric in  resultControllerConfig.metaData.metrics "></select>
+        </div>
+        <div class="graph-select" data-ng-show="resultControllerConfig.metaData.quickView">
+            <label class="label-bold">Quick Views:</label>
+            <select id="quickViewList" data-chosen="resultControllerConfig.metaData.quickView" data-ng-change="quickViewOnChange()" data-ng-model="resultControllerConfig.metaData.quickView.selected" data-ng-options="qv.value as qv.displayName for qv in  resultControllerConfig.metaData.quickView"></select>
+        </div>
+        <div class="graphspinner" data-progress-notification="inProgress"></div>
+        <highchart config="chartConfig" data-ng-show="dataLength"></highchart>
+        <span data-ng-show="!dataLength"><span>No records found</span></span>
+    </div>
+</div>-->
+<div style="height:500px;width:100%;">
+<div [chart]="chart"></div></div>
